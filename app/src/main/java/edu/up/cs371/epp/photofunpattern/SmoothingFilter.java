@@ -32,8 +32,12 @@ public class SmoothingFilter extends PhotoFilter {
         int intensity6 = (Color.red(inPixel6) + Color.green(inPixel6) + Color.blue(inPixel6));
         int intensity7 = (Color.red(inPixel7) + Color.green(inPixel7) + Color.blue(inPixel7));
         int intensity8 = (Color.red(inPixel8) + Color.green(inPixel8) + Color.blue(inPixel8));
-        int edgeIntensity1 = intensity1 + intensity3+ ;
-        intensity = intensity + intensity4 + intensity5 + intensity6 + intensity7 + intensity8;
+        int edgeIntensity1 = intensity1 + intensity3+ intensity5 + intensity7;
+        edgeIntensity1 = edgeIntensity1 / 10;
+        int digIntensity1 = intensity0 + intensity2+ intensity6 + intensity8;
+        digIntensity1 = digIntensity1 / 10;
+        int intensity = edgeIntensity1 + digIntensity1 + intensity4;
+        intensity = intensity / 3;
 
         return Color.argb(Color.alpha(inPixel4), intensity,intensity,intensity);
     }
