@@ -58,10 +58,10 @@
             android:layout_weight="0.2" />
 
         <Button
-            android:text="Brightness Filter"
+            android:text="Edge Filter"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:id="@+id/brightnessFilterButton"
+            android:id="@+id/edgeDetector"
             android:layout_weight="3"
             android:textSize="18sp" />
 
