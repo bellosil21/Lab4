@@ -52,7 +52,7 @@ public abstract class PhotoFilter {
         int height = inBmp.getHeight();
 
         Bitmap newBmp = Bitmap.createBitmap(width, height, inBmp.getConfig());
-        //we set w and h = 1 in order to avoid boundaries
+        //we set w and h = 1 in order to avoid bo
         for (int w = 1; w < width-1; w++) {
             for (int h = 1; h < height-1; h++) {
                 int inPixel0 = inBmp.getPixel(w-1,h-1);
