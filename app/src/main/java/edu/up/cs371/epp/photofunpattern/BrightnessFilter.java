@@ -24,12 +24,9 @@ public class BrightnessFilter extends PhotoFilter {
     * @param inPixel is a 32 bit pixel that contains RGB color values
     * @return a new Pixel in which each of the RGB components has been increased
     */
+
     public int transformPixel(int inPixel0, int inPixel1, int inPixel2, int inPixel3, int inPixel4,
                               int inPixel5, int inPixel6, int inPixel7, int inPixel8) {
-
-
-
-
 
         int outPixel4 = inPixel0 * 1 + inPixel1 * 1 + inPixel2 * -1 + inPixel3 * 1 + inPixel4 * -2 +
                 inPixel5 * -1 + inPixel6 * 1 + inPixel7 * 1 + inPixel8 * -1;
