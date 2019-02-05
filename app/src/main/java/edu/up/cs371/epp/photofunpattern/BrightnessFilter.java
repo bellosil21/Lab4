@@ -24,15 +24,18 @@ public class BrightnessFilter extends PhotoFilter {
     * @param inPixel is a 32 bit pixel that contains RGB color values
     * @return a new Pixel in which each of the RGB components has been increased
     */
-
-
     public int transformPixel(int inPixel0, int inPixel1, int inPixel2, int inPixel3, int inPixel4,
                               int inPixel5, int inPixel6, int inPixel7, int inPixel8) {
 
-        int outPixel4 = inPixel0 * 1 + inPixel1 * 1 + inPixel2 * -1 + inPixel3 * 1 + inPixel4 * -2 +
-                inPixel5 * -1 + inPixel6 * 1 + inPixel7 * 1 + inPixel8 * -1;
+        int outPixel4_r = Color.red(inPixel0) * 1 + Color.red(inPixel1) * 1 + Color.red(inPixel2) * -1 + Color.red(inPixel3) * 1 + Color.red(inPixel4) * -2 +
+                Color.red(inPixel5) * -1 + Color.red(inPixel6) * 1 + Color.red(inPixel7) * 1 + Color.red(inPixel8) * -1;
+        int outPixel4_g = Color.green(inPixel0) * 1 + Color.green(inPixel1) * 1 + Color.green(inPixel2) * -1 + Color.green(inPixel3) * 1 + Color.green(inPixel4) * -2 +
+                Color.green(inPixel5) * -1 + Color.green(inPixel6) * 1 + Color.green(inPixel7) * 1 + Color.green(inPixel8) * -1;
+        int outPixel4_b = Color.blue(inPixel0) * 1 + Color.blue(inPixel1) * 1 + Color.blue(inPixel2) * -1 + Color.blue(inPixel3) * 1 + Color.blue(inPixel4) * -2 +
+                Color.blue(inPixel5) * -1 + Color.blue(inPixel6) * 1 + Color.blue(inPixel7) * 1 + Color.blue(inPixel8) * -1;
 
-        return outPixel4;
+
+        return Color.argb(Color.alpha(inPixel4), outPixel4_r, outPixel4_g, outPixel4_b);
     }
 
     public Bitmap apply(Bitmap inBmp) {
