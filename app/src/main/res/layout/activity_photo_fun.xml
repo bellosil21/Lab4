@@ -57,6 +57,13 @@
             android:layout_height="match_parent"
             android:layout_weight="0.2" />
 
+        <Spinner
+            android:id="@+id/imageNames"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6.2"
+            android:background="#00ffff" />
+
         <Button
             android:text="Edge Filter"
             android:layout_width="0dp"
